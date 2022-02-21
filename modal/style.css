@@ -1,12 +1,28 @@
-body {
+* {
     box-sizing: border-box;
+}
+
+body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
 .open {
     display: block;
-    margin: 30% auto 0;
+    margin: 20% auto;
+    border: 3px solid #000000;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #e4e4e4;
+    transition: .3s ease;
+}
+
+.open:hover {
+    border-color: #e4e4e4;
+    background-color: #000000;
+    color: #e4e4e4;
 }
 
 .modal {
@@ -16,6 +32,7 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -23,6 +40,18 @@ body {
 
 .modal__content {
     background-color: #FFFFFF;
+    animation-name: modalOpen;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes modalOpen {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .modal__header,
@@ -33,6 +62,7 @@ body {
 .modal__header {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .modal__header__title {
@@ -40,11 +70,17 @@ body {
     padding: 10px;
 }
 
-.modal__header .button_close {
+.modal__header .button.button_close {
     border: none;
     background-color: transparent;
     cursor: pointer;
     padding: 12px;
+    transition: .3s ease;
+    font-size: 18px;
+}
+
+.modal__header .button.button_close:hover {
+    color: #b10000;
 }
 
 .modal__footer .button.button_close,
@@ -52,19 +88,22 @@ body {
     border: none;
     background-color: #333333;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 10px 14px;
     color: #FFFFFF;
-    transition: .5s ease;
+    transition: .3s ease;
     margin: 10px;
 }
 
-.modal__footer .button.button_submit:disabled {
-    background-color: #777777;
+.modal__footer .button.button_close:hover {
+    background-color: #b10000;
 }
 
-.modal__footer .button.button_close:hover {
-    background-color: #FFFFFF;
-    color: #333333;
+.modal__footer .button.button_submit.disabled {
+    background-color: #6d6d6d;
+}
+
+.modal__footer .button.button_submit.undisabled:hover {
+    background-color: #149400;
 }
 
 .modal__footer {
@@ -72,15 +111,19 @@ body {
     justify-content: right;
 }
 
-.modal__form input.input_name,
-.modal__form input.input_password {
-    border: 1px solid #333333;
-    display: flex;
-    margin: 10px;
-    padding: 5px 10px;
+.modal__form {
+    padding: 15px;
 }
 
-.undisabled:hover {
-    background-color: #FFFFFF;
-    color: #333333;
+.modal__form input.input_name,
+.modal__form input.input_password {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #333333;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.modal__form input.input_password {
+    margin-bottom: 20px;
 }

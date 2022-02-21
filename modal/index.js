@@ -1,37 +1,49 @@
-function openModal() {
-    let openBtn = document.querySelector('.open');
-    let modal = document.querySelector('.modal');
+function modal() {
+    const modal = document.querySelector('.modal');
 
-    openBtn.addEventListener('click', () => {
-        modal.style.display = 'flex';
-    });
-}
-
-function closeModal() {
-    let closeBtns = document.querySelectorAll('.button_close');
-
-    closeBtns.forEach(elem => {
-        elem.addEventListener('click', () => {
-            elem.parentNode.parentNode.parentNode.style.display = 'none';
+    function openModal() {
+        const openBtn = document.querySelector('.open');
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'flex';
         });
-    });
-}
-
-function submitForm() {
-    let submitBtn = document.querySelector('.button_submit');
-    let inputFormName = document.querySelector('.modal__form input.input_name');
-    let inputFormPassword = document.querySelector('.modal__form input.input_password');
-    // !inputFormName.value == '' || !inputFormPassword.value == ''
-    if (submitBtn.hasAttribute('disabled')) {
-        submitBtn.classList.add('undisabled');
     }
 
-    submitBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        submitBtn.parentNode.parentNode.parentNode.style.display = 'none';
-    });
+    function closeModal() {
+        const closeBtns = document.querySelectorAll('.button_close');
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        closeBtns.forEach(elem => {
+            elem.addEventListener('click', () => {
+                elem.parentNode.parentNode.parentNode.style.display = 'none';
+            });
+        });
+    }
+
+    function submitForm() {
+        const submitBtn = document.querySelector('.button_submit');
+        let inputFormName = document.querySelector('input.input_name');
+        let inputFormPassword = document.querySelector('input.input_password');
+
+        function check() {
+            if (inputFormName.value !== '' && inputFormPassword.value !== '') {
+                submitBtn.removeAttribute('disabled');
+                submitBtn.classList.add('undisabled');
+                submitBtn.classList.remove('disabled');
+            }
+        }
+
+        inputFormName.addEventListener('change', check);
+        inputFormPassword.addEventListener('input', check);
+    }
+
+    openModal();
+    closeModal();
+    submitForm();
 }
 
-openModal();
-closeModal();
-submitForm();
+modal();
