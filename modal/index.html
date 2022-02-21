@@ -20,13 +20,13 @@
             </div>
             <div class="modal__body">
                 <form action="application.php" class="modal__form" id="modalForm">
-                    <input class="input input_name" type="email" name="email" placeholder="Your email">
-                    <input class="input input_password" type="password" name="password" placeholder="Your password">
+                    <input class="input input_name" type="email" name="email" placeholder="Your email" required>
+                    <input class="input input_password" type="password" name="password" placeholder="Your password" required>
                 </form>
             </div>
             <div class="modal__footer">
                 <button class="button button_close">Закрыть</button>
-                <button type="submit" class="button button_submit" form="modalForm">Войти</button>
+                <button type="submit" class="button button_submit" form="modalForm" disabled>Войти</button>
             </div>
         </div>
     </div>

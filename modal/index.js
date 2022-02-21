@@ -9,16 +9,6 @@ function openModal() {
 
 function closeModal() {
     let closeBtns = document.querySelectorAll('.button_close');
-    let modal = document.querySelector('.modal');
-    let modalContent = document.querySelector('.moda__content');
-
-    document.addEventListener('click', event => {
-        const closeModal = event.composedPath().includes(modalContent);
-
-        if (!closeModal) {
-            modal.style.display = 'none';
-        }
-    });
 
     closeBtns.forEach(elem => {
         elem.addEventListener('click', () => {
@@ -29,11 +19,16 @@ function closeModal() {
 
 function submitForm() {
     let submitBtn = document.querySelector('.button_submit');
+    let inputFormName = document.querySelector('.modal__form input.input_name');
+    let inputFormPassword = document.querySelector('.modal__form input.input_password');
+    // !inputFormName.value == '' || !inputFormPassword.value == ''
+    if (submitBtn.hasAttribute('disabled')) {
+        submitBtn.classList.add('undisabled');
+    }
 
     submitBtn.addEventListener('click', (event) => {
         event.preventDefault();
-
-        alert('Вход!');
+        submitBtn.parentNode.parentNode.parentNode.style.display = 'none';
     });
 }
 
