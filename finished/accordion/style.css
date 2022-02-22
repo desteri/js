@@ -1,0 +1,32 @@
+.accordion__header {
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #dddddd;
+    transition: .1s linear;
+}
+
+.accordion__header::after {
+    content: '+';
+    font-size: 14px;
+    color: #333333;
+    float: right;
+}
+
+.color::after {
+    content: '-';
+}
+
+.accordion__header:hover,
+.accordion__header.color {
+    background-color: #b9b9b9;
+}
+
+.accordion__content {
+    padding: 0 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+}

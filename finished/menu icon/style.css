@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon .bar1,
+.menu-icon .bar2,
+.menu-icon .bar3 {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333333;
+    transition: .3s ease;
+}
+
+.menu-icon .bar1.rotate {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-icon .bar2 {
+    opacity: 1;
+}
+
+.menu-icon .bar2.none {
+    opacity: 0;
+}
+
+.menu-icon .bar3.rotate {
+    transform: translateY(-10px) rotate(-45deg);
+}

@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+.tabs {
+    border: 1px solid #888888;
+    display: flex;
+    background-color: #eeeeee;
+}
+
+.tabs .tab {
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    background-color: #eeeeee;
+    transition: .2s ease;
+}
+
+.tabs .tab:hover {
+    background-color: #b8b8b8;
+}
+
+.tabs .tab.color {
+    background-color: #888888;
+}
+
+.content {
+    display: none;
+    animation: fade 1s;
+    padding: 10px;
+}
+
+.content h3 {
+    margin: 0;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
