@@ -1,14 +1,14 @@
 function modal() {
     const modal = document.querySelector('.modal');
 
-    function openModal() {
+    const openModal = () => {
         const openBtn = document.querySelector('.open');
         openBtn.addEventListener('click', () => {
             modal.style.display = 'flex';
         });
     }
 
-    function closeModal() {
+    const closeModal = () => {
         const closeBtns = document.querySelectorAll('.button_close');
 
         window.addEventListener('click', (event) => {
@@ -24,13 +24,16 @@ function modal() {
         });
     }
 
-    function submitForm() {
+    const submitForm = () => {
         const submitBtn = document.querySelector('.button_submit');
-        let inputFormName = document.querySelector('input.input_name');
-        let inputFormPassword = document.querySelector('input.input_password');
+        const inputFormName = document.querySelector('input.input_name');
+        const inputFormPassword = document.querySelector('input.input_password');
 
         function check() {
-            if (inputFormName.value !== '' && inputFormPassword.value !== '') {
+            let nameValue = inputFormName.value;
+            let passwordValue = inputFormPassword.value;
+
+            if ((nameValue !== '' && nameValue.length > 5) && (passwordValue !== '' && passwordValue.length > 8)) {
                 submitBtn.removeAttribute('disabled');
                 submitBtn.classList.add('undisabled');
                 submitBtn.classList.remove('disabled');
@@ -38,7 +41,7 @@ function modal() {
         }
 
         inputFormName.addEventListener('change', check);
-        inputFormPassword.addEventListener('input', check);
+        inputFormPassword.addEventListener('change', check);
     }
 
     openModal();
