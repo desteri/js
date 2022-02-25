@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.tabs {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabs .tab {
+    display: block;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: .2s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.hov:hover {
+    background-color: #b8b8b8;
+}
+
+.content {
+    padding: 50px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 42px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.red {
+    background-color: #f44336;
+}
+
+.green {
+    background-color: #04AA6D;
+}
+
+.blue {
+    background-color: #2196F3;
+}
+
+.orange {
+    background-color: #ff5722;
+}
