@@ -41,14 +41,6 @@ function sideNav() {
         aside.style.width = '0';
         document.body.style.backgroundColor = '#FFFFFF';
     });
-
-    if (aside.scrollWidth == 250) {
-        window.addEventListener('click', () => {
-            cont.style.marginLeft = '0';
-            aside.style.width = '0';
-            document.body.style.backgroundColor = '#FFFFFF';
-        });
-    }
 }
 
 sideNav();
