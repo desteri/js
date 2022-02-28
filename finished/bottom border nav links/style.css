@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav {
+    font-size: 0;
+    background-color: #dddddd;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: #333333;
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+a:hover {
+    border-bottom: 3px solid red;
+}
+
+.active {
+    border-bottom: 3px solid red;
+}

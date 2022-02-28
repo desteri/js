@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+}
+
+a {
+    display: block;
+    padding: 8px 10px;
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333333;
+}
+
+main {
+    margin-left: 150px;
+}
