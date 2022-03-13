@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mega Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar__inner">
+        <li class="navbar__link"><a href="#">Home</a></li>
+        <li class="navbar__link"><a href="#">News</a></li>
+        <li class="navbar__link dropdown">
+          <button class="dropdown__btn">Dropdown</button>
+
+          <div class="dropdown__content">
+            <div class="dropdown__header">
+              <h2>Mega Menu</h2>
+            </div>
+            <div class="row">
+              <div class="column">
+                <h3 class="column__header">Category 1</h3>
+                <ul class="column__links">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3 class="column__header">Category 2</h3>
+                <ul class="column__links">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+              <div class="column">
+                <h3 class="column__header">Category 3</h3>
+                <ul class="column__links">
+                  <li><a href="#">Link 1</a></li>
+                  <li><a href="#">Link 2</a></li>
+                  <li><a href="#">Link 3</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="index.js"></script>
+  </body>
+</html>

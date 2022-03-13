@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.breadcrumb {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.breadcrumb li:not(:last-child)::after {
+    content: '/';
+
+}
+
+.breadcrumb li:last-child {
+    padding: 5px 10px;
+    color: #bbbbbb;
+}
+
+.breadcrumb li a {
+    padding: 5px 10px;
+    transition: .3s;
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline;
+}
