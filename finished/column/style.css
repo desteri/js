@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+    color: #fff;
+}
+
+.column {
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 5px solid #fff;
+}

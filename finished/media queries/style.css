@@ -1,0 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+    color: #fff;
+}
+
+.column {
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+    .column {
+        font-size: 4px;
+    }
+}

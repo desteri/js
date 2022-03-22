@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+}
+
+.column {
+    background-color: #eee;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lft {
+    flex: 50%;
+}
+
+.rgt {
+    flex: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    .lft,
+    .rgt {
+        flex: 100%;
+    }
+}

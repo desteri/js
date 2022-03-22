@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+}
+
+.card {
+    position: relative;
+    width: 40%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: .5s ease;
+    background-color: #d34d4d;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    color: #333333;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

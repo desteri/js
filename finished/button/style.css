@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333333;
+}
+
+button {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    width: 200px;
+    cursor: pointer;
+    padding: 20px;
+    color: #333333;
+    font-size: 20px;
+    transition: all .5s;
+}
+
+.ripple {
+    background-color: #107506;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.ripple::after {
+    content: '';
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all .8s;
+}
+
+.ripple:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.fade {
+    background-color: #ca3914;
+    color: #fff;
+    opacity: .5;
+}
+
+.fade:hover {
+    opacity: 1;
+}
+
+.press {
+    background-color: #046d00;
+    color: #fff;
+    box-shadow: 0 10px #aaa;
+    transition: all .3s;
+}
+
+.press:active {
+    box-shadow: 0 5px #aaa;
+    transform: translateY(5px);
+}
+
+.arrow span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.arrow span::after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .5s;
+}
+
+.arrow:hover span {
+    padding-right: 25px;
+}
+
+.arrow:hover span::after {
+    opacity: 1;
+    right: 0;
+}
